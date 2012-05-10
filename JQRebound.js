@@ -2,19 +2,19 @@
  * A jQuery plugin JQRebound
  * Author: Alex100dre
  */
- // Permet de ne pas entrer en conflits avec d'autres pluggins se servant du dollar comme déclaration de variable
+ // Permet de ne pas entrer en conflits avec d'autres pluggins se servant du dollar comme dï¿½claration de variable
 (function($){
 
-	//attache la fonction rebound à jQuery
+	//attache la fonction rebound ï¿½ jQuery
 	$.fn.JQRebound = function(options){
 		
-		//paramètres par défaut
+		//paramï¿½tres par dï¿½faut
 		var settings =$.extend({
 			//----------------------------variables
 			begin	:	0,
-			up		:	50,
+			up	:	50,
 			speed	:	800,
-			run		:	true,
+			run	:	true,
 			replay	:	true
 		}, options);
 		
