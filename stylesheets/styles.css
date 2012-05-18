@@ -820,6 +820,19 @@ section #title .credits.right {
   float: right;
 }
 
+.rebound {
+  		background-color:#FFEE88;
+			top:0px;
+			left:240px
+			padding:5px;
+			width:150px;
+			height:150px;
+			text-align:center;
+			margin:0 auto;
+			margin-top : 200px;
+			border-radius : 75px;
+		}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
