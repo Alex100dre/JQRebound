@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>JQRebound by Alex100dre</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Alex100dre/JQRebound">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Alex100dre/JQRebound/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Alex100dre/JQRebound/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>JQRebound</h1>
+          <p>a jquery plugin</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Alex100dre">Alex100dre</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>What is JQRebound ?</h3>
+
+<p>JQRebound is a jquery plugin allows you to bounce an element on a page in a simple and customizable manner . I especially developed for icons or logos but you can assign the script to any element with a small line of code.</p>
+
+<h3>Usage.</h3>
+
+<p>To use JQRebound, first we need to load the jQuery library in our page :</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p>You need to download and load "easing" in your page too</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"easing.js"</span><span class="nt">&gt;&lt;/script&gt;</span> 
+</pre>
+</div>
+
+
+<p>Now, download JQRebound, place it in the folder of your site and load it at the beginning of your html page like easing:</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"JQRebound.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p>So JQRebound is loaded, now we need to call the function and parameterize the option if necessary. For this we proceed like this:</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script&gt;</span><span class="nx">$</span><span class="p">(</span><span class="s2">".rebound"</span><span class="p">).</span><span class="nx">JQRebound</span> <span class="p">()</span><span class="nt">&lt;/script&gt;</span>          //with options
+<span class="nt">&lt;script&gt;</span><span class="nx">$</span><span class="p">(</span><span class="s2">".rebound"</span><span class="p">).</span><span class="nx">JQRebound</span> <span class="p">({</span><span class="nx">options</span><span class="p">})</span><span class="nt">&lt;/script&gt;</span>        //without options
+</pre>
+</div>
+
+
+<p>The customizable options are :</p>
+
+<pre><code>begin,up,speed,replay and pos.
+</code></pre>
+
+<p>the default settings are :</p>
+
+<div class="highlight">
+<pre><span class="nx">begin</span>   <span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="nx">up</span>  <span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+<span class="nx">speed</span>   <span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+<span class="nx">replay</span>  <span class="o">=</span><span class="kc">true</span>
+</pre>
+</div>
+
+
+<p>To change the settings value, we need to redefine the variables at the function calling. Like this :</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script&gt;</span><span class="nx">$</span><span class="p">(</span><span class="s2">".rebound"</span><span class="p">).</span><span class="nx">JQRebound</span> <span class="p">({</span><span class="nx">replay</span><span class="o">:</span><span class="kc">false</span><span class="p">})</span><span class="nt">&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p>Note: if I want to redefine many settings I have to separate them by commas except the last. like this :</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script&gt;</span><span class="nx">$</span><span class="p">(</span><span class="s2">".rebound"</span><span class="p">).</span><span class="nx">JQRebound</span> <span class="p">({</span><span class="nx">replay</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span><span class="nx">speed</span><span class="o">:</span><span class="mi">850</span><span class="p">,</span><span class="nx">up</span><span class="o">:</span><span class="mi">60</span><span class="p">})</span><span class="nt">&lt;/script&gt;</span>
+</pre>
+</div>
+
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
